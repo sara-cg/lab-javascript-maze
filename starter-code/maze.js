@@ -8,28 +8,52 @@ var Maze = function(map, exit) {
   this._exit = {
     row: exit.row,
     col: exit.col
+  };
+};
+
+Maze.prototype.turnLeft = function() {
+  switch (this._miner.dir) {
+    case this._miner.dir = 0:
+      this._miner.dir = 3;
+      break;
+    case this._miner.dir = 1:
+      this._miner.dir = 0;
+      break;
+    case this._miner.dir = 2:
+      this._miner.dir = 1;
+      break;
+    case this._miner.dir = 3:
+      this._miner.dir = 2;
+      break;
   }
-}
+};
 
-Maze.prototype.turnLeft      = function(){
-}
+Maze.prototype.turnRight = function() {
+  switch (this._miner.dir) {
+    case this._miner.dir = 0:
+      this._miner.dir = 1;
+      break;
+    case this._miner.dir = 1:
+      this._miner.dir = 2;
+      break;
+    case this._miner.dir = 2:
+      this._miner.dir = 3;
+      break;
+    case this._miner.dir = 3:
+      this._miner.dir = 0;
+      break;
+  }
+};
 
-Maze.prototype.turnRight     = function(){
-}
 
-Maze.prototype.isPathForward = function(){
-}
+Maze.prototype.isPathForward = function() {}
 
-Maze.prototype.isPathLeft    = function(){
-}
+Maze.prototype.isPathLeft = function() {}
 
-Maze.prototype.isPathRight   = function(){
-}
+Maze.prototype.isPathRight = function() {}
 
-Maze.prototype.moveForward   = function(){
-}
+Maze.prototype.moveForward = function() {}
 
-Maze.prototype.notDone       = function(){
-}
+Maze.prototype.notDone = function() {}
 
 module.exports = Maze;
